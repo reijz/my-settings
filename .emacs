@@ -4,7 +4,6 @@
 ;; evaluating this file and print errors in the *Messags* buffer.
 ;; Use this file in place of ~/.emacs (which is loaded as well.)
 
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -12,26 +11,6 @@
  ;; If there is more than one, they won't work right.
  '(auto-fill-function nil t)
  '(case-fold-search nil)
- '(default-frame-alist
-    (quote
-     ((tool-bar-lines . 1)
-      (menu-bar-lines . 1)
-      (internal-border-width . 0)
-      (fringe)
-      (left-fringe . 4)
-      (right-fringe . 0))))
- '(fringe-indicator-alist
-   (quote
-    ((continuation nil nil)
-     (truncation left-truncation right-truncation)
-     (continuation left-continuation right-continuation)
-     (overlay-arrow . right-triangle)
-     (up . up-arrow)
-     (down . down-arrow)
-     (top top-left-angle top-right-angle)
-     (bottom bottom-left-angle bottom-right-angle top-right-angle top-left-angle)
-     (top-bottom left-bracket right-bracket top-right-angle top-left-angle)
-     (unknown . question-mark))) t)
  '(global-flyspell-mode t)
  '(global-linum-mode t)
  '(ns-tool-bar-display-mode (quote icons) t)
@@ -56,6 +35,10 @@
 
 
 ;; ----------------------------for latex ---------------------------
+
+;; Starts the Emacs server
+(server-start)
+
 ;; Show path of file in titlebar
 (setq-default frame-title-format "%b (%f)")
 
