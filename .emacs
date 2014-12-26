@@ -11,6 +11,12 @@
  ;; If there is more than one, they won't work right.
  '(auto-fill-function nil t)
  '(case-fold-search nil)
+ '(default-frame-alist
+    (quote
+     ((internal-border-width . 0)
+      (fringe)
+      (left-fringe . 0)
+      (right-fringe . 0))))
  '(global-flyspell-mode t)
  '(global-linum-mode t)
  '(ns-tool-bar-display-mode (quote icons) t)
@@ -21,17 +27,15 @@
  '(split-width-threshold 0)
  '(text-mode-hook (quote (smart-spacing-mode)))
  '(visual-line-mode t t)
- '(word-wrap t)
- )
+ '(word-wrap t))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit tex-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 150 :width normal :family "Monaco"))))
- '(latex-mode-default ((t (:inherit tex-mode-default :stipple nil :strike-through nil :underline nil :slant normal :weight normal :height 150 :width normal :family "Monaco"))))
- )
+ '(default ((t (:inherit nil :slant normal :weight normal :height 140 :width normal  :family "Monaco"))))
+ '(latex-mode-default ((t (:inherit tex-mode-default :slant normal :weight normal :height 140 :width normal :family "Monaco")))))
 
 
 ;; ----------------------------for latex ---------------------------
