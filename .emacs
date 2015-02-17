@@ -1,6 +1,6 @@
 ;; Set some global variables 
 (custom-set-variables
-;; '(auto-fill-function nil t)
+ '(auto-fill-function nil t)
  '(case-fold-search nil)
  '(default-frame-alist
     (quote
@@ -11,29 +11,33 @@
       (left-fringe . 0)
       (right-fringe . 0))))
  '(global-flyspell-mode t)
- '(inhibit-startup-screen t)
-;; '(split-height-threshold nil)
-;; '(split-width-threshold 0)
+ '(global-linum-mode t)
+ '(linum-format " %d ")
+ '(split-height-threshold nil)
+ '(split-width-threshold 0)
  '(tool-bar-mode nil)
  '(visual-line-mode t t)
  '(word-wrap t))
+
+;; use aspell to spell checking
+(setq ispell-program-name "aspell")
+(add-to-list 'exec-path "/usr/local/bin")
 
 ;; Customerize font
 (custom-set-faces
  '(default ((t (:inherit nil :slant normal :weight normal :height 150 :width normal :family "Monaco"))))
  '(latex-mode-default ((t (:inherit tex-mode-default :slant normal :weight normal :height 150 :width normal :family "Monaco"))))
- '(linum ((t (:background "#f5f5f5")))))
+ '(linum ((t (:background "#e6e6e6")))))
 
-;; line number
-(global-linum-mode t)
-(setq linum-format " %d ")
+;; Do not show toolbar
+(tool-bar-mode -1)
+
+;; Show path of file in titlebar
+(setq-default frame-title-format "%b (%f)")
 
 ;; highlight current line
 (global-hl-line-mode t)
 (set-face-background hl-line-face "#f5f5f5")
-
-;; Show path of file in titlebar
-(setq-default frame-title-format "%b (%f)")
 
 ;; Auxtex
 (load "auctex.el" nil t t)
@@ -50,20 +54,18 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 (setq reftex-toc-split-windows-horizontally t)
-;; using \eqref{} instead of (\ref{})
 (setq reftex-label-alist '((nil ?e nil "~\\eqref{%s}" nil nil)))
 
+;; pdflatex
+(setq TeX-PDF-mode t)
+
 ;; for parentheses
-(show-paren-mode 1)
 (setq LaTeX-electric-left-right-brace 1)
 
 ;; for inserting $|$
 (add-hook 'LaTeX-mode-hook
 	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
 			  (cons "$" "$"))))
-
-;; pdflatex
-(setq TeX-PDF-mode t)
 
 ;; for emacs to know where is pdflatex
 (getenv "PATH")
@@ -108,31 +110,30 @@
 (setq TeX-view-program-list
      '(("PDF Viewer" "/Applications/Skim.app/Contents/SharedSupport/displayline -b %n %o %b")))
 
-;; To invoke Skim using shift-command-click
 (add-hook 'LaTeX-mode-hook
-          (lambda () (local-set-key (kbd "<S-s-mouse-1>") #'TeX-view)))
-
-;; use aspell to spell checking
-(setq ispell-program-name "aspell")
-(add-to-list 'exec-path "/usr/local/bin")
+          (lambda () (local-set-key (kbd "<S-s-mouse-1>") #'TeX-view))
+          )
 
 ;; for blinking box cursor
 (set-default 'cursor-type 'box)
 
 ;; Using in Emacs 24.0 
+
 (defvar blink-cursor-colors (list  "#92c48f" "#6785c5" "#be369c" "#d9ca65")
   "On each blink the cursor will cycle to the next color in this list.")
 
 (setq blink-cursor-count 0)
 (defun blink-cursor-timer-function ()
   "Zarza wrote this cyberpunk variant of timer `blink-cursor-timer'. 
-   Warning: overwrites original version in `frame.el'.
-   This one changes the cursor color on each blink. Define colors in `blink-cursor-colors'."
+  Warning: overwrites original version in `frame.el'.
+
+ This one changes the cursor color on each blink. Define colors in `blink-cursor-colors'."
   (when (not (internal-show-cursor-p))
     (when (>= blink-cursor-count (length blink-cursor-colors))
       (setq blink-cursor-count 0))
     (set-cursor-color (nth blink-cursor-count blink-cursor-colors))
     (setq blink-cursor-count (+ 1 blink-cursor-count))
     )
-  (internal-show-cursor nil (not (internal-show-cursor-p))))
+  (internal-show-cursor nil (not (internal-show-cursor-p)))
+  )
 
