@@ -1,7 +1,7 @@
 # Latex coding style
 
 
-Often in time, I find many latex source files in a mess, making editing an excruciatingly painful experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the source code neat, readable and not so painful to do editing. 
+Often in time, I find many latex source files in a mess, making editing an excruciating experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the source code neat, readable and not so painful to do editing. 
 
 ### Math displays
 
@@ -90,4 +90,4 @@ Here are some macros I defined for convenience.
 \newcommand{\jiheng}[1]{\textcolor{magenta}{{Jiheng: }{#1}}} % comments by Jiheng
 ```
 
-However, I do not suggestion to define `\lm` for `\lambda`. It does not worth the trouble. Also, if using a good editor (e.g., emacs), frequently used code such as `\lambda` are done by convenient shortcuts. 
+However, I do not suggest to define `\lm` for `\lambda`. It does not worth the trouble. Also, if using a good editor (e.g., emacs), frequently used code such as `\lambda` are done by convenient shortcuts. 
