@@ -1,7 +1,7 @@
 # Latex coding style
 
 
-Often in time, I find many latex source files in a mess, making editing an excruitiatingly painful experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the sourse code neat, readable and not so painful to do editing. 
+Often in time, I find many latex source files in a mess, making editing an excruciatingly painful experience. This is not necessarily the case if we can tide up the source file. Here are some coding style I suggest, that will make the source code neat, readable and not so painful to do editing. 
 
 ### Math displays
 
@@ -18,7 +18,7 @@ Please avoid using `\[...\]`. There are convenient shortcuts in a good editor (e
 
 ### Labeling
 
-In order that equations/sections/theorems/etc. to be cited later without too much pain, a neat labeling system is necessary. A lable should be like `{type:content}` where `type` could be "eq", "thm", "cond", etc. and `content` should suggest the content of the labeled object. For example, the above equation is labeled as `{eq:energy-mass}`.
+In order that equations/sections/theorems/etc. to be cited later without too much pain, a neat labelling system is necessary. A label should be like `{type:content}` where `type` could be "eq", "thm", "cond", etc. and `content` should suggest the content of the labeled object. For example, the above equation is labeled as `{eq:energy-mass}`.
 
 ### Text
 
@@ -69,7 +69,7 @@ Never use
 Here are some macros I defined for convenience. 
 
 ``` latex
-% some macro for typying
+% some macro for typing
 \newcommand{\R}{\mathbb{R}} % real numbers
 \newcommand{\Q}{\mathbb{Q}} % rational numbers
 \newcommand{\Z}{\mathbb{Z}} % integer numbers
