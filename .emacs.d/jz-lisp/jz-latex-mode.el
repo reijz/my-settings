@@ -12,7 +12,10 @@
 ;; hooking reftex
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
-(setq reftex-toc-split-windows-horizontally t)
+(setq reftex-toc-split-windows-horizontally t
+      reftex-toc-split-windows-fraction 0.62)
+(setq reftex-cite-format 'natbib
+      reftex-sort-bibtex-matches 'reverse-year)
 
 ;; using \eqref{} instead of (\ref{})
 (setq reftex-label-alist '((nil ?e nil "~\\eqref{%s}" nil nil)))
