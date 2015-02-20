@@ -33,7 +33,11 @@
 (set-face-background hl-line-face "#f5f5f5")
 
 ;; Show path of file in titlebar
-(setq-default frame-title-format "%b (%f)")
+;; (setq-default frame-title-format "%b (%f)")
+(setq frame-title-format
+      '((:eval (if (buffer-file-name)
+                   (abbreviate-file-name (buffer-file-name))
+                 "%b"))))
 
 ;; Show matching parenthesis
 (show-paren-mode 1)
