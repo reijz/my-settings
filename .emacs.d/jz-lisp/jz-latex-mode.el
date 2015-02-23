@@ -56,7 +56,7 @@
           (lambda () (local-set-key (kbd "<S-s-mouse-1>") #'TeX-view)))
 
 ;; Error handling
-;; (setq TeX-error-overview-open-after-TeX-run t)
+(setq TeX-display-help nil)
 
 ;; Clean things up
 (eval-after-load 'latex
