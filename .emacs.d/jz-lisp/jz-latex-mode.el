@@ -1,14 +1,12 @@
 ;; Load Auxtex
 (load "auctex.el" nil t t)
 
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-
+;; Some mode to be hooked
 (add-hook 'LaTeX-mode-hook 'visual-line-mode)
 (add-hook 'LaTeX-mode-hook 'flyspell-mode)
 (add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
 
-;; hooking reftex
+;; hooking up and setting reftex
 (add-hook 'LaTeX-mode-hook 'turn-on-reftex)
 (setq reftex-plug-into-AUCTeX t)
 (setq reftex-toc-split-windows-horizontally t
@@ -30,11 +28,12 @@
 ;; Choose pdflatex
 (setq TeX-PDF-mode t)
 
-;; for emacs to know where is pdflatex
+;; For emacs to know where is pdflatex
 (getenv "PATH")
 (setenv "PATH"
 	(concat
 	 "/usr/texbin" ":" (getenv "PATH")))
+
 
 ;; Make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
@@ -55,6 +54,14 @@
 ;; To invoke Skim using shift-command-click
 (add-hook 'LaTeX-mode-hook
           (lambda () (local-set-key (kbd "<S-s-mouse-1>") #'TeX-view)))
+
+;; Error handling
+;; (setq TeX-error-overview-open-after-TeX-run t)
+
+;; Clean things up
+(eval-after-load 'latex
+  '(setq LaTeX-clean-intermediate-suffixes
+     (append LaTeX-clean-intermediate-suffixes (list "\\.fdb_latexmk" "\\.rel" "\\.tex~"))))
 
 ;; Provide package
 (provide 'jz-latex-mode)
