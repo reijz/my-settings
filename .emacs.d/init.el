@@ -8,9 +8,13 @@
 ;; Selection delete mode
 (delete-selection-mode 1)
 
+;; Auto revert buffer
+(global-auto-revert-mode 1)
+
 ;; Some key bindings
 (global-set-key (kbd "<s-left>") 'beginning-of-line)
 (global-set-key (kbd "<s-right>") 'end-of-line)
+(global-set-key (kbd "C-c r") 'revert-buffer)
 
 ;; Add load path
 (add-to-list 'load-path "~/.emacs.d/jz-lisp")

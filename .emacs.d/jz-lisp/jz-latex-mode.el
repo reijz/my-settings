@@ -34,7 +34,6 @@
 	(concat
 	 "/usr/texbin" ":" (getenv "PATH")))
 
-
 ;; Make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
 (add-hook 'LaTeX-mode-hook (lambda ()
