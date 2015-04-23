@@ -48,8 +48,7 @@ The above steps basically customize and set up the following things
 * For latex, I set the compiler to be `pdflatex`, loaded [auctex](http://www.gnu.org/software/auctex/) (step 3 in the above).
 * I make [latexmk](http://users.phys.psu.edu/~collins/software/latexmk-jcc/) available in compiling tools. Often in time, you need to compile the latex file multiple time to get the reference (to equations, section, bib items) right. With latexmk, you don't need to worry about it. Latexmk is a perl script for running LaTeX the correct number of times to resolve cross references. In order this works with emacs, you need to set it up as I did in the `.emacs.d` (step 3 in the above) and put the `.latexmkrc` file in the home folder of unix/linux user (step 4 in the above).
 * Step 5 is needed for error handling when compiling latex. I got the tip from 
-  [https://groups.google.com/forum/#!topic/comp.text.tex/aY3xrX7F3eM]
-   (https://groups.google.com/forum/#!topic/comp.text.tex/aY3xrX7F3eM)
+  [https://groups.google.com/forum/#!topic/comp.text.tex/aY3xrX7F3eM](https://groups.google.com/forum/#!topic/comp.text.tex/aY3xrX7F3eM)
 
 ### Compiling and Error Handling
 
@@ -63,8 +62,7 @@ Emacs can also sync with pdf reader [skim](http://skim-app.sourceforge.net) on O
 
 Then `shift-cmd-click` on pdf in skim will take you to the corresponding location in the latex code, and same action on the latex code in emacs will take you to the corresponding location in the pdf file. The accuracy is up to the line in latex code.  
 
-[http://mactex-wiki.tug.org/wiki/index.php/SyncTeX]
-(http://mactex-wiki.tug.org/wiki/index.php/SyncTeX)
+[http://mactex-wiki.tug.org/wiki/index.php/SyncTeX](http://mactex-wiki.tug.org/wiki/index.php/SyncTeX)
 
 
 ### Some basic shortcuts to get started
@@ -72,12 +70,12 @@ Then `shift-cmd-click` on pdf in skim will take you to the corresponding locatio
 Latexing using emacs with [auctex](http://www.gnu.org/software/auctex/) is quite easy. Here is a brief list of command short cuts to get you started. 
 
 
-2. To type any begin/end environment, you just need to type `C-c C-e`. 
-3. Referencing an equation/section is easy. Use `C-c C-)` you will see the list of all equations/sections in the paper. 
-4. To reference any article in your bib file, just use `C-c C-[` and type author's name or some words in the title, you will see the list of papers containing the words you type. 
-5. Navigating through long article is also easy, just use `C-c C-=`. 
-6. In math environment, to type a greek letter, just use ```+`a` for `\alpha`. See the reference card for a complete list. Most are intuitive, e.g., ```+`e` for `\epsilon` and ```+`b` for `\beta`.
-7. You can insert `$`...`$` or `\(...\)` (in fact most paired parenthesis and brackets) by typing a single `$` or `\(`. In order to use this feature.
-8. There are more advantages, see the reference card. You may also google if you need any features particularly for yourself.
+1. To type any begin/end environment, you just need to type `C-c C-e`. 
+2. Referencing an equation/section is easy. Use `C-c C-)` you will see the list of all equations/sections in the paper. 
+3. To reference any article in your bib file, just use `C-c C-[` and type author's name or some words in the title, you will see the list of papers containing the words you type. 
+4. Navigating through long article is also easy, just use `C-c C-=`. 
+5. In math environment, to type a greek letter, just use ```+`a` for `\alpha`. See the reference card for a complete list. Most are intuitive, e.g., ```+`e` for `\epsilon` and ```+`b` for `\beta`.
+6. You can insert `$`...`$` or `\(...\)` (in fact most paired parenthesis and brackets) by typing a single `$` or `\(`. In order to use this feature.
+7. There are more advantages, see the reference card. You may also google if you need any features particularly for yourself.
 
 See the [reference card](http://verse.ielm.ust.hk/files/tex-ref.pdf) for various shortcuts.
