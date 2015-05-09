@@ -1,0 +1,5 @@
+ln .my-settings/.bash_prompt .bash_prompt
+ln -s .my-settings/.bash_profile .bash_profile
+ln -s .my-settings/.emacs.d/ .emacs.d
+ln -s .my-settings/.latexmkrc .latexmkrc
+ln -s .my-settings/.vimrc.local .vimrc.local
