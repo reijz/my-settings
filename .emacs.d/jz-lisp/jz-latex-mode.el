@@ -38,7 +38,7 @@
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
 (add-hook 'LaTeX-mode-hook (lambda ()
   (push
-    '("latexmk" "latexmk -synctex=1 -pv -pdf %s" TeX-run-TeX nil t
+    '("latexmk" "latexmk -synctex=1 -pvc -pdf %s" TeX-run-TeX nil t
       :help "Run latexmk on file")
     TeX-command-list)))
 (add-hook 'TeX-mode-hook '(lambda () (setq TeX-command-default "latexmk")))
