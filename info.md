@@ -6,6 +6,8 @@ ln -s .my-settings/.bash_profile .bash_profile
 ln -s .my-settings/.emacs.d/ .emacs.d
 ln -s .my-settings/.latexmkrc .latexmkrc
 ln -s .my-settings/.vimrc.local .vimrc.local
+ln -s .my-settings/.gitconfig .gitconfig
+git config --global core.excludesfile ~/.my-settings/.gitignore-global
 ```
 
 # apps to be installed via terminal
@@ -22,4 +24,4 @@ brew cask install macdown
 brew cask install appcleaner
 ```
 
-> Don't install skim via brew cask as the emacs sync will not work. 
+> Don't install skim via brew cask as the emacs sync will not work.

@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[core]
+# Please adapt and uncomment the following lines:
+	excludesfile = /Users/jz/.my-settings/.gitignore-global
+[user]
+	name = Jiheng Zhang
+	email = jiheng@ust.hk
