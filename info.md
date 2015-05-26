@@ -7,7 +7,6 @@ ln -s .my-settings/.emacs.d/ .emacs.d
 ln -s .my-settings/.latexmkrc .latexmkrc
 ln -s .my-settings/.vimrc.local .vimrc.local
 ln -s .my-settings/.gitconfig .gitconfig
-git config --global core.excludesfile ~/.my-settings/.gitignore-global
 ```
 
 # apps to be installed via terminal
