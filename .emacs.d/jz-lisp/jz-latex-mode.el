@@ -33,6 +33,11 @@
 (setenv "PATH"
 	(concat
 	 "/usr/texbin" ":" (getenv "PATH")))
+;; Temporary fix for El Capitan
+(setenv "PATH"
+	(concat
+	 "/Library/TeX/Distributions/Programs/texbin" ":" (getenv "PATH")))
+
 
 ;; Make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
