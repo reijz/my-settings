@@ -29,15 +29,14 @@
 (setq TeX-PDF-mode t)
 
 ;; For emacs to know where is pdflatex
-(getenv "PATH")
-(setenv "PATH"
-	(concat
-	 "/usr/texbin" ":" (getenv "PATH")))
-;; Temporary fix for El Capitan
 (setenv "PATH"
 	(concat
 	 "/Library/TeX/Distributions/Programs/texbin" ":" (getenv "PATH")))
-
+;; Since El Capitan, the TeX path is changed to the above. 
+;; The following is just for backward compatibility
+(setenv "PATH"
+	(concat
+	 "/usr/texbin" ":" (getenv "PATH")))
 
 ;; Make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)
