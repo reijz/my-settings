@@ -11,7 +11,7 @@ CLASSPATH="./:/usr/sr/sr/local/ssj/ssj.jar:$JPHOME/QueueSystem/bin"
 export CLASSPATH
 
 # For homebrew: Python Latex
-export PATH=/usr/local/bin:/usr/texbin:/Library/TeX/Distributions/Programs/texbin:$PATH
+export PATH=/usr/local/bin:/Library/TeX/Distributions/Programs/texbin:$PATH
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
