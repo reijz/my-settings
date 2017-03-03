@@ -2,3 +2,7 @@ set linespace=1
 set lines=49 columns=120
 set guifont=Andale\ Mono\ Regular:h15,Menlo\ Regular:h15,Consolas\ Regular:h15,Courier\ New\ Regular:h15
 set nofoldenable    " disable folding"
+<<<<<<< HEAD
+=======
+Plugin 'JuliaLang/julia-vim'
+>>>>>>> fed93f27d5794f93b24f646727035f62d3c3bd13
