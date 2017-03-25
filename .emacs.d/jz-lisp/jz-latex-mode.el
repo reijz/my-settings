@@ -25,6 +25,9 @@
 	  (lambda () (set (make-variable-buffer-local 'TeX-electric-math)
 			  (cons "$" "$"))))
 
+;; Always parse the file upon opening
+(setq TeX-parse-self t)
+
 ;; Choose pdflatex
 (setq TeX-PDF-mode t)
 
@@ -36,7 +39,7 @@
 ;; The following is just for backward compatibility
 (setenv "PATH"
 	(concat
-	 "/usr/texbin" ":" (getenv "PATH")))
+	 "/usr/local/bin/" ":" "/usr/texbin" ":" (getenv "PATH")))
 
 ;; Make latexmk available via C-c C-c
 ;; Note: SyncTeX is setup via ~/.latexmkrc (see below)

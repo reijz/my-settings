@@ -5,7 +5,7 @@
  '(default-frame-alist
     (quote
      ((width . 100)
-      (height . 37)
+      (height . 42)
       (internal-border-width . 0)
       (fringe)
       (left-fringe . 0)
