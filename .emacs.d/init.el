@@ -14,6 +14,10 @@
 ;; Selection delete mode
 (delete-selection-mode 1)
 
+;; set windown splitting
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)
+
 ;; Auto revert buffer
 (global-auto-revert-mode 1)
 
@@ -39,6 +43,9 @@
 
 ;; Language settings
 (require 'jz-latex-mode)
+
+;; Language settings
+(require 'jz-markdown-mode)
 
 ;; Language settings
 (require 'jz-org-mode)

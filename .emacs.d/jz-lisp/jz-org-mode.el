@@ -21,15 +21,10 @@
 (setq org-latex-listings 'minted)
 
 
-(setq markdown-command "pandoc --standalone --mathjax --from=markdown")
-
-
 (add-hook 'gfm-mode-hook 'turn-on-auto-fill)
 (add-hook 'org-mode-hook 'turn-on-auto-fill)
 
-
 (setq org-log-done t)
-(setq markdown-command "pandoc --standalone --mathjax --from=markdown")
 
 ;; Provide package
 (provide 'jz-org-mode)
