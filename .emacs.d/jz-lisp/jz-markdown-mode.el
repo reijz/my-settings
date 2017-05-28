@@ -18,11 +18,11 @@
 
 (setq markdown-enable-math t)
 
-(setq markdown-command "/usr/local/bin/pandoc --smart --standalone --mathjax --from markdown -t html --css http://verse.ust.hk/css/github.css")
+(setq markdown-command "/usr/local/bin/pandoc --smart --standalone --mathjax --from markdown -t html --css http://dmac.ust.hk/css/github.css")
 
-; (let ((gfm-css "/Users/jz/.emacs.d/jz-lisp/css/GitHub2.css"))
-;  (when (file-exists-p gfm-css)
-;    (setq markdown-css-paths `(,gfm-css))))
+; (setq markdown-command "/usr/local/bin/pandoc --smart --standalone --mathjax --from markdown -t html --css http://verse.ust.hk/bootstrap/css/bootstrap.min.css")
+
+; (setq markdown-css-paths "http://verse.ust.hk/css/github.css")
 
 ;; Provide package
 (provide 'jz-markdown-mode)
