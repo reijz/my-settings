@@ -2,7 +2,7 @@
 [core]
 	excludesfile = /Users/jz/.my-settings/.gitignore-global
 [user]
-	name = Jiheng Zhang
+	name = Rei J. Zhang
 	email = jiheng@ust.hk
 [mergetool]
 	keepBackup = false
@@ -25,4 +25,9 @@
 [filter "hawser"]
 	clean = git hawser clean %f
 	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
 	required = true
