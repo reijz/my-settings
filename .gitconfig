@@ -5,7 +5,7 @@
 	name = Rei J. Zhang
 	email = jiheng@ust.hk
 [mergetool]
-	keepBackup = false
+	keepBackup = true
 	prompt = false
 [mergetool "Kaleidoscope"]
 	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
